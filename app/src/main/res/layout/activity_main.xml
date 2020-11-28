@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context="com.example.adewijanugraha.healthycare.MainActivity">
+
+    <LinearLayout
+        android:id="@+id/activity_main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="bottom"
+            android:paddingBottom="0dp"
+            android:weightSum="3">
+
+            <Button
+                android:id="@+id/btnBmi"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:background="@color/colorPrimaryDark"
+                android:gravity="center"
+                android:onClick="bmi"
+                android:text="IMT"
+                android:textAppearance="?android:textAppearanceMedium"
+                android:textColor="#FFFFFF" />
+
+            <ImageButton
+                android:id="@+id/btnHome"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+                android:layout_weight="1"
+                android:background="@color/colorPrimaryLight"
+                android:gravity="center"
+                android:onClick="home"
+                android:scaleType="fitCenter"
+                android:src="@drawable/home" />
+
+            <Button
+                android:id="@+id/btnKalori"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:background="@color/colorPrimaryDark"
+                android:gravity="center"
+                android:onClick="kalori"
+                android:text="Kalori"
+                android:textAppearance="?android:textAppearanceMedium"
+                android:textColor="#FFFFFF" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:paddingLeft="5dp"
+                android:text="Nama : "
+                android:textAppearance="?android:textAppearanceMedium"
+                android:textColor="#000000" />
+
+            <EditText
+                android:id="@+id/edtNama"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:hint="Input Nama Anda"
+                android:inputType="text"
+                android:textAppearance="?android:textAppearanceMedium" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:paddingLeft="5dp"
+                android:text="E-Mail : "
+                android:textAppearance="?android:textAppearanceMedium"
+                android:textColor="#000000" />
+
+            <EditText
+                android:id="@+id/edtEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:hint="Input E-Mail Anda"
+                android:inputType="textEmailAddress"
+                android:textAppearance="?android:textAppearanceMedium" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="5dp"
+                android:text="Jenis Kelamin :"
+                android:textAppearance="?android:textAppearanceMedium"
+                android:textColor="#000000" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RadioGroup
+                    android:id="@+id/radio"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <RadioButton
+                        android:id="@+id/cekLaki"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="false"
+                        android:text="Laki-Laki"
+                        android:textAppearance="?android:textAppearanceMedium" />
+
+                    <RadioButton
+                        android:id="@+id/cekPerempuan"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="false"
+                        android:text="Perempuan"
+                        android:textAppearance="?android:textAppearanceMedium" />
+
+                </RadioGroup>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="5dp"
+                android:text="Tinggi Badan : "
+                android:textAppearance="?android:textAppearanceMedium"
+                android:textColor="#000000" />
+
+            <EditText
+                android:id="@+id/edtTinggi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint=" cm "
+                android:inputType="numberDecimal"
+                android:textAppearance="?android:textAppearanceMedium" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="5dp"
+                android:text="Berat Badan : "
+                android:textAppearance="?android:textAppearanceMedium"
+                android:textColor="#000000" />
+
+            <EditText
+                android:id="@+id/edtBerat"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint=" kg "
+                android:inputType="numberDecimal"
+                android:textAppearance="?android:textAppearanceMedium" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="5dp"
+                android:text="Umur : "
+                android:textAppearance="?android:textAppearanceMedium"
+                android:textColor="#000000" />
+
+            <EditText
+                android:id="@+id/edtUmur"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="tahun"
+                android:inputType="numberDecimal"
+                android:textAppearance="?android:textAppearanceMedium" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <Button
+                android:id="@+id/btnReset"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                android:background="@color/colorPrimary"
+                android:onClick="reset"
+                android:text="reset"
+                android:textColor="#FFFFFF" />
+
+            <Button
+                android:id="@+id/btnSubmit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                android:background="@color/colorPrimary"
+                android:onClick="submit"
+                android:text="Submit"
+                android:textColor="#FFFFFF" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/txtKet"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:text=""
+            android:textAppearance="?android:textAppearanceMedium"
+            android:textColor="#F44336" />
+    </LinearLayout>
+
+
+</ScrollView>
+
+
+
+

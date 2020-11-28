@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context="com.example.adewijanugraha.healthycare.KaloriActivity">
+
+    <LinearLayout
+        android:id="@+id/activity_kalori"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="bottom"
+            android:paddingBottom="0dp"
+            android:weightSum="3">
+
+            <Button
+                android:id="@+id/btnBmi"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:background="@color/colorPrimaryDark"
+                android:gravity="center"
+                android:onClick="bmi"
+                android:text="IMT"
+                android:textAppearance="?android:textAppearanceMedium"
+                android:textColor="#FFFFFF" />
+
+            <ImageView
+                android:id="@+id/btnHome"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+                android:layout_weight="1"
+                android:background="@color/colorPrimaryDark"
+                android:gravity="center"
+                android:onClick="home"
+                android:padding="7dp"
+                android:src="@drawable/home" />
+
+            <Button
+                android:id="@+id/btnKalori"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:background="@color/colorPrimaryLight"
+                android:gravity="center"
+                android:onClick="kalori"
+                android:shadowColor="@color/colorPrimary"
+                android:text="KALORI"
+                android:textStyle="bold"
+                android:textAppearance="?android:textAppearanceLarge"
+                android:textColor="#000000" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:layout_marginTop="5dp"
+            android:gravity="center_horizontal"
+            android:text="Kalkulator Kalori Harian"
+            android:textAppearance="?android:textAppearanceLarge"
+            android:textColor="#000000" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="5dp"
+            android:paddingLeft="5dp"
+            android:text="Level Aktivitas Fisik :"
+            android:textAppearance="?android:textAppearanceMedium"
+            android:textColor="#000000" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:orientation="vertical">
+
+            <RadioGroup
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <RadioButton
+                    android:id="@+id/btnTidak"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Tidak Berolahraga Sama Sekali dalam Seminggu" />
+
+                <RadioButton
+                    android:id="@+id/btnRingan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Berolahraga 1-2 Kali dalam Seminggu" />
+
+                <RadioButton
+                    android:id="@+id/btnSedang"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Berolahraga 3-4 Kali dalam Seminggu" />
+
+                <RadioButton
+                    android:id="@+id/btnBerat"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Berolahraga 5-6 Kali dalam Seminggu" />
+
+                <RadioButton
+                    android:id="@+id/btnSaBer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Berolahraga 2 Kali dalam Sehari" />
+            </RadioGroup>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btnHitung"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:background="@color/colorPrimary"
+            android:onClick="hitung"
+            android:text="HITUNG"
+            android:textAppearance="?android:textAppearanceMedium"
+            android:textColor="#FFFFFF"
+            android:textColorHighlight="@color/colorAccent" />
+
+        <TextView
+            android:id="@+id/txtHasil"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:textAppearance="?android:textAppearanceMedium"
+            android:textColor="@color/colorTextPrimary" />
+
+        <Button
+            android:id="@+id/btnOrder"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@color/colorPrimary"
+            android:onClick="button"
+            android:text="SHARE"
+            android:textAppearance="?android:textAppearanceMedium"
+            android:textColor="#FFFFFF" />
+    </LinearLayout>
+</ScrollView>
+
